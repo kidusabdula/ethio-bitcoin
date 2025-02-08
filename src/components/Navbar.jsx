@@ -1,20 +1,21 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; 
 import ethiopian_flag from "../assets/flag.png";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="bg-[#A67B5B] relative ">
-      {/* Curved Bottom Border */}
+    <nav className="bg-[#AF8F6F] relative">
       <div
-        className="absolute bottom-0 left-0 right-0 h-4 bg-[#A67B5B] rounded-b-3xl"
+        className="absolute bottom-0 left-0 right-0 h-4 bg-[#AF8F6F]"
         style={{
-          clipPath: "ellipse(50% 100% at 50% 100%)", // Creates a smooth curve at the bottom
+          clipPath: "ellipse(50% 100% at 50% 100%)", 
         }}
       ></div>
 
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 rounded-t-3xl shadow-lg">
-        {/* Logo */}
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 rounded-t-3xl">
         <motion.a
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -31,13 +32,12 @@ const Navbar = () => {
           </div>
         </motion.a>
 
-        {/* Mobile Menu Button */}
         <button
-          data-collapse-toggle="navbar-default"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
           className="inline-flex items-center justify-center p-2 w-12 h-12 text-sm text-gray-300 bg-[#E4E0E1]/20 rounded-full md:hidden hover:bg-[#E4E0E1]/30 focus:outline-none focus:ring-2 focus:ring-[#E4E0E1]/50"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -57,7 +57,6 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Desktop Menu */}
         <motion.div
           className="hidden w-full md:block md:w-auto"
           id="navbar-default"
@@ -67,34 +66,94 @@ const Navbar = () => {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-[#E4E0E1]/20 rounded-2xl bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             <li>
-              <motion.a
-                href="#"
-                className="block py-3 px-6 text-white rounded-full md:hover:text-[#D6C0B3] md:hover:bg-transparent md:p-0 transition-all duration-300"
+              <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                Home
-              </motion.a>
+                <Link
+                  to="/"
+                  className="block py-3 px-6 text-white rounded-full md:hover:text-[#D6C0B3] md:hover:bg-transparent md:p-0 transition-all duration-300"
+                >
+                  Home
+                </Link>
+              </motion.div>
             </li>
             <li>
-              <motion.a
-                href="#"
-                className="block py-3 px-6 text-white rounded-full md:hover:text-[#D6C0B3] md:hover:bg-transparent md:p-0 transition-all duration-300"
+              <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                Agenda
-              </motion.a>
+                <Link
+                  to="/agenda"
+                  className="block py-3 px-6 text-white rounded-full md:hover:text-[#D6C0B3] md:hover:bg-transparent md:p-0 transition-all duration-300"
+                >
+                  Agenda
+                </Link>
+              </motion.div>
             </li>
             <li>
-              <motion.a
-                href="#"
-                className="block py-3 px-6 text-white rounded-full md:hover:text-[#D6C0B3] md:hover:bg-transparent md:p-0 transition-all duration-300"
+              <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                Register
-              </motion.a>
+                <Link
+                  to="/register"
+                  className="block py-3 px-6 text-white rounded-full md:hover:text-[#D6C0B3] md:hover:bg-transparent md:p-0 transition-all duration-300"
+                >
+                  Register
+                </Link>
+              </motion.div>
+            </li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full md:hidden bg-[#A67B5B] rounded-2xl shadow-lg mt-4`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ul className="font-medium flex flex-col p-4 space-y-2">
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link
+                  to="/"
+                  className="block py-3 px-6 text-white rounded-full hover:text-[#D6C0B3] transition-all duration-300"
+                >
+                  Home
+                </Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link
+                  to="/agenda"
+                  className="block py-3 px-6 text-white rounded-full hover:text-[#D6C0B3] transition-all duration-300"
+                >
+                  Agenda
+                </Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link
+                  to="/register"
+                  className="block py-3 px-6 text-white rounded-full hover:text-[#D6C0B3] transition-all duration-300"
+                >
+                  Register
+                </Link>
+              </motion.div>
             </li>
           </ul>
         </motion.div>
