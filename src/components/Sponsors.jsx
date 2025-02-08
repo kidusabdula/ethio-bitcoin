@@ -29,7 +29,6 @@ const Sponsors = () => {
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-[#74512D] dark:text-[#74512D] md:text-4xl">
           Our Partners
         </h2>
-        {/* Grid Layout */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-center items-center">
           {partners.map((partner, index) => (
             <a

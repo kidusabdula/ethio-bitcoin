@@ -38,7 +38,6 @@ const Hero = () => {
         style={{ bottom: "20%", right: "10%" }}
       />
 
-      {/* Floating Decorative Circles */}
       <motion.div
         className="absolute w-40 sm:w-60 h-40 sm:h-60 rounded-full bg-[#E4E0E1]/50"
         animate={{ scale: [1, 2, 1], opacity: [0.9, 0.3, 0.9] }}
@@ -52,7 +51,6 @@ const Hero = () => {
         style={{ bottom: "20%", right: "10%" }}
       ></motion.div>
 
-      {/* Floating Bitcoin Symbols */}
       <motion.div
         className="absolute text-5xl sm:text-7xl font-bold text-[#E4E0E1]"
         animate={{ y: [0, -20, 0], x: [-50, 50, -50] }}
@@ -94,9 +92,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1 }}
         >
-          Join us in reshaping Ethiopia&apos;s infrastructure through sustainable
-          Bitcoin mining practices. Be part of the journey towards making
-          Ethiopia a global mining and investment destination.
+          Join us in reshaping Ethiopia&apos;s infrastructure through
+          sustainable Bitcoin mining practices. Be part of the journey towards
+          making Ethiopia a global mining and investment destination.
         </motion.p>
         <motion.div
           className="text-lg sm:text-xl text-[#A67B5B] font-semibold mb-10 sm:mb-10"

@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import BackgroundImage from "../assets/night.png"; 
+import BackgroundImage from "../assets/night.png";
 
 const Content = () => {
   const headingRef = useRef(null);
@@ -14,14 +14,12 @@ const Content = () => {
 
   return (
     <div
-      className="py-16 md:py-24 lg:py-32 bg-cover bg-center relative" 
+      className="py-16 md:py-24 lg:py-32 bg-cover bg-center relative"
       style={{
-        backgroundImage: `url(${BackgroundImage})`, 
+        backgroundImage: `url(${BackgroundImage})`,
       }}
     >
-      <div
-        className="absolute inset-0 bg-[#AF8F6F]/70"
-      ></div>
+      <div className="absolute inset-0 bg-[#AF8F6F]/70"></div>
 
       <div className="relative z-10 text-white px-4 sm:px-6 lg:px-8">
         <motion.h1
@@ -33,13 +31,12 @@ const Content = () => {
           }
           transition={{ duration: 0.5 }}
         >
-          Unlock Ethiopia&apos;s Potential marks a pivotal moment in East Africa&apos;s
-          digital transformation. As Ethiopia embraces Bitcoin mining, we&apos;re
-          witnessing the dawn of a new era in the region&apos;s technological
-          landscape.
+          Unlock Ethiopia&apos;s Potential marks a pivotal moment in East
+          Africa&apos;s digital transformation. As Ethiopia embraces Bitcoin
+          mining, we&apos;re witnessing the dawn of a new era in the
+          region&apos;s technological landscape.
         </motion.h1>
 
-        {/* Subheading */}
         <motion.p
           ref={subheadingRef}
           className="text-center text-base sm:text-lg md:text-xl lg:text-2xl my-6 font-medium"
@@ -50,13 +47,12 @@ const Content = () => {
           transition={{ duration: 0.5 }}
         >
           Join us for this groundbreaking event that brings together industry
-          leaders, policymakers, and innovators to explore Ethiopia&apos;s potential
-          in the global Bitcoin mining ecosystem. We&apos;ll discuss sustainable
-          mining practices, regulatory frameworks, and the economic impact of
-          Bitcoin mining in Ethiopia.
+          leaders, policymakers, and innovators to explore Ethiopia&apos;s
+          potential in the global Bitcoin mining ecosystem. We&apos;ll discuss
+          sustainable mining practices, regulatory frameworks, and the economic
+          impact of Bitcoin mining in Ethiopia.
         </motion.p>
 
-        {/* Paragraph */}
         <motion.div
           ref={paragraphRef}
           className="space-y-4 text-center my-8 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed"
@@ -74,10 +70,9 @@ const Content = () => {
           </p>
         </motion.div>
 
-        {/* Decorative Line */}
         <motion.div
           ref={lineRef}
-          className="w-20 sm:w-24 md:w-28 lg:w-32 h-1 bg-white mx-auto mt-8 mb-12" 
+          className="w-20 sm:w-24 md:w-28 lg:w-32 h-1 bg-white mx-auto mt-8 mb-12"
           initial={{ width: 0 }}
           animate={isLineInView ? { width: "5rem" } : { width: 0 }}
           transition={{ duration: 1 }}
