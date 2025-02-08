@@ -19,7 +19,7 @@ const Footer = () => {
           >
             © 2025{" "}
             <a href="#" className="hover:underline font-semibold">
-              Ethiopia&apos;s Potential
+            Unlock Ethiopia Potential
             </a>
             . All rights reserved.
           </motion.div>

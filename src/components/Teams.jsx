@@ -47,7 +47,7 @@ const Teams = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                CEO - Potentia
+                CEO - potentia
               </a>
             </p>
           </div>
