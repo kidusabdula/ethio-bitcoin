@@ -17,7 +17,7 @@ const Agenda = () => {
           time: "6:30 PM - 6:45 PM",
           title: "Opening Remarks",
           speaker: "Robert Luft",
-          speakerInfo: "Strategist | Board Member | Entrepreneur",
+          speakerInfo: "CEO - potentia",
           speakerImage: robert,
           linkedin: "https://www.linkedin.com/in/robluft/",
           location: "Main Hall",
@@ -28,7 +28,7 @@ const Agenda = () => {
           time: "6:45 PM - 7:00 PM",
           title: "Current State of Ethiopia Bitcoin Mining",
           speaker: "Kal Kassa",
-          speakerInfo: "Bitcoin Education Specialist",
+          speakerInfo: "CEO - BitcoinBirr",
           speakerImage: kal,
           linkedin: "https://www.linkedin.com/in/kalkassa/",
           location: "Main Hall",
@@ -90,12 +90,10 @@ const Agenda = () => {
         transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
         style={{ bottom: "20%", right: "15%" }}
       ></motion.div>
-
       <div
         className="absolute inset-0 bg-gradient-to-br from-transparent via-[#AF8F6F]/5 to-[#AF8F6F]/10 pointer-events-none"
         style={{ zIndex: -1 }}
       ></div>
-
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.h2
           className="text-4xl font-bold text-[#AF8F6F] text-center mb-12"
@@ -105,7 +103,6 @@ const Agenda = () => {
         >
           Event Schedule
         </motion.h2>
-
         <div className="space-y-16">
           {agendaItems.map((day, dayIndex) => (
             <motion.div
@@ -134,13 +131,11 @@ const Agenda = () => {
                         <div className="w-0.5 h-full bg-[#AF8F6F]/30 absolute left-0 top-4"></div>
                       )}
                     </div>
-
                     <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-[#AF8F6F]/20 relative overflow-hidden">
                       <div
                         className="absolute inset-0 bg-gradient-to-br from-transparent via-[#AF8F6F]/5 to-[#AF8F6F]/10 opacity-50 pointer-events-none"
                         style={{ zIndex: -1 }}
                       ></div>
-
                       <div className="text-sm text-[#AF8F6F] font-medium mb-2">
                         {event.time}
                       </div>
@@ -149,7 +144,6 @@ const Agenda = () => {
                       </h4>
                       {event.speaker && (
                         <div className="flex items-center space-x-4 mb-4">
-                          {/* Speaker Image */}
                           <a
                             href={event.linkedin}
                             target="_blank"
@@ -162,7 +156,6 @@ const Agenda = () => {
                               alt={`${event.speaker}'s Profile`}
                             />
                           </a>
-                          {/* Speaker Details */}
                           <div>
                             <p className="text-gray-600 font-medium">
                               {event.speaker}

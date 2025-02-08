@@ -15,10 +15,13 @@ const Teams = () => {
             unforgettable experience with their knowledge and passion!
           </p>
         </div>
+
         <div className="grid gap-8 md:grid-cols-3 md:gap-12">
           <div className="text-center text-gray-300 dark:text-gray-300 mb-8 md:mb-0">
             <a
               href="https://www.linkedin.com/in/robluft/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block overflow-hidden rounded-full mx-auto w-60 h-60 transform transition duration-300 hover:scale-110"
             >
               <img
@@ -28,13 +31,32 @@ const Teams = () => {
               />
             </a>
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-white dark:text-white mt-4">
-              <a href="#">Robert Luft</a>
+              <a
+                href="https://www.linkedin.com/in/robluft/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Robert Luft
+              </a>
             </h3>
-            <p className="text-white">CEO - Potentia</p>
+            <p className="text-white">
+              <a
+                href="https://www.linkedin.com/in/robluft/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                CEO - Potentia
+              </a>
+            </p>
           </div>
+
           <div className="text-center text-gray-300 dark:text-gray-300 mb-8 md:mb-0">
             <a
               href="https://www.linkedin.com/in/kalkassa/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block overflow-hidden rounded-full mx-auto w-60 h-60 transform transition duration-300 hover:scale-110"
             >
               <img
@@ -44,13 +66,32 @@ const Teams = () => {
               />
             </a>
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-white dark:text-white mt-4">
-              <a href="#">Kal Kassa</a>
+              <a
+                href="https://www.linkedin.com/in/kalkassa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Kal Kassa
+              </a>
             </h3>
-            <p className="text-white">CEO - BitcoinBirr</p>
+            <p className="text-white">
+              <a
+                href="https://www.linkedin.com/in/kalkassa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                CEO - BitcoinBirr
+              </a>
+            </p>
           </div>
+
           <div className="text-center text-gray-300 dark:text-gray-300">
             <a
               href="https://www.linkedin.com/in/luca-infeld/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block overflow-hidden rounded-full mx-auto w-60 h-60 transform transition duration-300 hover:scale-110"
             >
               <img
@@ -60,9 +101,25 @@ const Teams = () => {
               />
             </a>
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-white dark:text-white mt-4">
-              <a href="#">Luca Infeld</a>
+              <a
+                href="https://www.linkedin.com/in/luca-infeld/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Luca Infeld
+              </a>
             </h3>
-            <p className="text-white">Founder - Munich International Mining</p>
+            <p className="text-white">
+              <a
+                href="https://www.linkedin.com/in/luca-infeld/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Founder - Munich International Mining
+              </a>
+            </p>
           </div>
         </div>
       </div>

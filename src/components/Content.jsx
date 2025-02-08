@@ -31,7 +31,7 @@ const Content = () => {
           }
           transition={{ duration: 0.5 }}
         >
-          Unlock Ethiopia&apos;s Potential marks a pivotal moment in East
+          Unlock Ethiopia Potential marks a pivotal moment in East
           Africa&apos;s digital transformation. As Ethiopia embraces Bitcoin
           mining, we&apos;re witnessing the dawn of a new era in the
           region&apos;s technological landscape.

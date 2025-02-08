@@ -76,7 +76,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
         >
-          Unlock Ethiopia&apos;s Potential
+          Unlock Ethiopia Potential
         </motion.h1>
         <motion.p
           className="text-xl sm:text-2xl text-black mb-4 sm:mb-6"
