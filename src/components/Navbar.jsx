@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; 
-import ethiopian_flag from "../assets/flag.png";
+import ethiopian_flag from "../assets/Flag.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
