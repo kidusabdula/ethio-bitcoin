@@ -9,16 +9,16 @@ import Potentia from "../assets/partners/Artboard1.jpg";
 
 const Sponsors = () => {
   const partners = [
-    { name: "Potentia", image: Potentia, link: "https://potentia.org.ng/" },
+    { name: "Potentia", image: Potentia },
     { name: "MIM", image: MIM, link: "https://mim.farm/en/" },
     {
       name: "Bitcoin Birr",
       image: BitcoinBirr,
       link: "https://bitcoinbirr.org/",
     },
-    { name: "Enegix", image: Enegix, link: "https://www.enegix.energy/" },
-    { name: "Megawatt", image: Megawatt, link: "https://megawatt.energy/" },
-    { name: "UWBO", image: UWBO, link: "https://www.uwbo.com/" },
+    { name: "Enegix", image: Enegix, link: "https://enegix.net/en" },
+    { name: "Megawatt", image: Megawatt, link: "https://www.megawatthq.com/" },
+    { name: "UWBO", image: UWBO, link: "https://uwbo.org/" },
     { name: "BitDeer", image: BitDeer, link: "https://www.bitdeer.com/" },
     { name: "Siban", image: Siban, link: "https://siban.org.ng/" },
   ];

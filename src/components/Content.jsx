@@ -20,8 +20,8 @@ const Content = () => {
       }}
     >
       <div className="absolute inset-0 bg-[#AF8F6F]/70"></div>
-
-      <div className="relative z-10 text-white px-4 sm:px-6 lg:px-8">
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#AF8F6F]"></div>
+      <div className="relative z-10 text-white px-4 sm:px-10 lg:px-14">
         <motion.h1
           ref={headingRef}
           className="mb-8 text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold leading-tight tracking-tight"
@@ -36,7 +36,6 @@ const Content = () => {
           mining, we&apos;re witnessing the dawn of a new era in the
           region&apos;s technological landscape.
         </motion.h1>
-
         <motion.p
           ref={subheadingRef}
           className="text-center text-base sm:text-lg md:text-xl lg:text-2xl my-6 font-medium"
@@ -52,7 +51,6 @@ const Content = () => {
           sustainable mining practices, regulatory frameworks, and the economic
           impact of Bitcoin mining in Ethiopia.
         </motion.p>
-
         <motion.div
           ref={paragraphRef}
           className="space-y-4 text-center my-8 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed"
@@ -69,7 +67,6 @@ const Content = () => {
             technological advancement in the region.
           </p>
         </motion.div>
-
         <motion.div
           ref={lineRef}
           className="w-20 sm:w-24 md:w-28 lg:w-32 h-1 bg-white mx-auto mt-8 mb-12"
@@ -82,5 +79,4 @@ const Content = () => {
   );
 };
 
-Content.propTypes = {};
 export default Content;

@@ -1,20 +1,19 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import ethiopian_flag from "../assets/Flag.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#AF8F6F] relative">
+    <nav className="bg-[#AF8F6F] opacity-80 sticky top-0 z-50"> 
       <div
         className="absolute bottom-0 left-0 right-0 h-4 bg-[#AF8F6F]"
         style={{
-          clipPath: "ellipse(50% 100% at 50% 100%)", 
+          clipPath: "ellipse(50% 100% at 50% 100%)",
         }}
       ></div>
-
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 rounded-t-3xl">
         <motion.a
           href="/"
@@ -31,7 +30,6 @@ const Navbar = () => {
             />
           </div>
         </motion.a>
-
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
@@ -56,7 +54,6 @@ const Navbar = () => {
             />
           </svg>
         </button>
-
         <motion.div
           className="hidden w-full md:block md:w-auto"
           id="navbar-default"
@@ -106,7 +103,6 @@ const Navbar = () => {
             </li>
           </ul>
         </motion.div>
-
         <motion.div
           className={`${
             isMenuOpen ? "block" : "hidden"
