@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="flex justify-center items-center h-[100vh] bg-white text-white text-center relative overflow-hidden">
-      {/* Floating Africa Watermark */}
       <motion.img
         src={africa_png}
         alt="Africa Watermark"
@@ -71,8 +70,8 @@ const Hero = () => {
         ₿
       </motion.div>
 
-      {/* Main Content */}
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8"> {/* Added padding for smaller screens */}
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8">
+        {" "}
         <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl text-[#74512D] font-extrabold mb-6 sm:mb-8"
           initial={{ opacity: 0, y: -100 }}
@@ -87,7 +86,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1 }}
         >
-          Pioneering the Future of Blockchain Technology
+          Pioneering the Future of Ethiopia&apos;s Digital Infrastructure
         </motion.p>
         <motion.p
           className="text-xs sm:text-sm md:text-base text-black mb-4 sm:mb-6"
@@ -95,9 +94,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1 }}
         >
-          Join us in shaping Ethiopia&apos;s digital landscape through innovative
-          blockchain solutions, sustainable mining practices, and cutting-edge
-          technology infrastructure.
+          Join us in reshaping Ethiopia&apos;s infrastructure through sustainable
+          Bitcoin mining practices. Be part of the journey towards making
+          Ethiopia a global mining and investment destination.
         </motion.p>
         <motion.div
           className="text-lg sm:text-xl text-[#A67B5B] font-semibold mb-10 sm:mb-10"

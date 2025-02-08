@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import BackgroundImage from "../assets/night.png"; // Import the image from /assets
+import BackgroundImage from "../assets/night.png"; 
 
 const Content = () => {
   const headingRef = useRef(null);
@@ -14,19 +14,16 @@ const Content = () => {
 
   return (
     <div
-      className="py-16 md:py-24 lg:py-32 bg-cover bg-center relative" // Increased vertical padding
+      className="py-16 md:py-24 lg:py-32 bg-cover bg-center relative" 
       style={{
-        backgroundImage: `url(${BackgroundImage})`, // Use the imported image
+        backgroundImage: `url(${BackgroundImage})`, 
       }}
     >
-      {/* Overlay for Brown Theme */}
       <div
-        className="absolute inset-0 bg-[#AF8F6F]/70" // Semi-transparent brown overlay
+        className="absolute inset-0 bg-[#AF8F6F]/70"
       ></div>
 
-      {/* Content Section */}
       <div className="relative z-10 text-white px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <motion.h1
           ref={headingRef}
           className="mb-8 text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold leading-tight tracking-tight"
@@ -80,7 +77,7 @@ const Content = () => {
         {/* Decorative Line */}
         <motion.div
           ref={lineRef}
-          className="w-20 sm:w-24 md:w-28 lg:w-32 h-1 bg-white mx-auto mt-8 mb-12" // Added bottom margin for extra spacing
+          className="w-20 sm:w-24 md:w-28 lg:w-32 h-1 bg-white mx-auto mt-8 mb-12" 
           initial={{ width: 0 }}
           animate={isLineInView ? { width: "5rem" } : { width: 0 }}
           transition={{ duration: 1 }}
