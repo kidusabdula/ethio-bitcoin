@@ -41,18 +41,18 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/register"
-                className="relative inline-block text-sm font-medium text-white transition-colors duration-300 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-yellow-200 before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-yellow-200"
-              >
-                Register
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/agenda"
                 className="relative inline-block text-sm font-medium text-white transition-colors duration-300 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-yellow-200 before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-yellow-200"
               >
                 Agenda
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/register"
+                className="relative inline-block text-sm font-medium text-white transition-colors duration-300 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-yellow-200 before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-yellow-200"
+              >
+                Register
               </Link>
             </li>
           </motion.ul>
