@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,7 +20,7 @@ const Footer = () => {
           >
             © 2025{" "}
             <a href="#" className="hover:underline font-semibold">
-            Unlock Ethiopia Potential
+              Unlock Ethiopia Potential
             </a>
             . All rights reserved.
           </motion.div>
@@ -31,28 +32,28 @@ const Footer = () => {
             transition={{ duration: 1, delay: 0.4 }}
           >
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="relative inline-block text-sm font-medium text-white transition-colors duration-300 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-yellow-200 before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-yellow-200"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/register"
+              <Link
+                to="/register"
                 className="relative inline-block text-sm font-medium text-white transition-colors duration-300 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-yellow-200 before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-yellow-200"
               >
                 Register
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/agenda"
+              <Link
+                to="/agenda"
                 className="relative inline-block text-sm font-medium text-white transition-colors duration-300 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-yellow-200 before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-yellow-200"
               >
                 Agenda
-              </a>
+              </Link>
             </li>
           </motion.ul>
         </div>
