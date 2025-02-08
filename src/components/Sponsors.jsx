@@ -29,18 +29,22 @@ const Sponsors = () => {
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-[#74512D] dark:text-[#74512D] md:text-4xl">
           Our Partners
         </h2>
-        <div className="flex flex-wrap justify-center gap-8 sm:gap-12 items-center">
+        {/* Grid Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-center items-center">
           {partners.map((partner, index) => (
-            <div
+            <a
               key={index}
-              className="flex items-center justify-center w-32 h-32"
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-full h-48 transition-transform duration-300 hover:scale-105"
             >
               <img
                 src={partner.image}
                 alt={partner.name}
-                className="max-h-full w-auto object-contain hover:opacity-80 transition-opacity duration-300"
+                className="max-h-full w-auto object-contain"
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>

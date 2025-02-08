@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import BackgroundImage from "../assets/night.png"; // Import the image from /assets
 
 const Content = () => {
   const headingRef = useRef(null);
@@ -12,62 +13,79 @@ const Content = () => {
   const isLineInView = useInView(lineRef, { once: true });
 
   return (
-    <div className="py-16 bg-white">
-      <motion.h1
-        ref={headingRef}
-        className="mb-8 text-center text-4xl font-extrabold leading-tight tracking-tight text-[#AF8F6F] md:text-5xl lg:text-6xl"
-        initial={{ opacity: 0, y: -50 }}
-        animate={
-          isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
-        }
-        transition={{ duration: 1 }}
-      >
-        Transforming Ethiopia&apos;s Digital Future
-      </motion.h1>
-      <motion.p
-        ref={subheadingRef}
-        className="text-center text-lg my-4 text-gray-500 font-medium lg:text-2xl sm:px-16 xl:px-48"
-        initial={{ opacity: 0, y: 50 }}
-        animate={
-          isSubheadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-        }
-        transition={{ duration: 1 }}
-      >
-        The Ethiopia Bitcoin Mining Summit marks a pivotal moment in East
-        Ethiopia&apos;s digital transformation. As Ethiopia embraces blockchain
-        technology and cryptocurrency mining, we&apos;re witnessing the dawn of a new
-        era in the region&apos;s technological landscape.
-      </motion.p>
-      <motion.div
-        ref={paragraphRef}
-        className="space-y-6 text-center my-8 text-gray-400 px-6 lg:px-20 xl:px-48 text-lg leading-relaxed"
-        initial={{ opacity: 0, y: 50 }}
-        animate={
-          isParagraphInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-        }
-        transition={{ duration: 1 }}
-      >
-        <p>
+    <div
+      className="py-16 md:py-24 lg:py-32 bg-cover bg-center relative" // Increased vertical padding
+      style={{
+        backgroundImage: `url(${BackgroundImage})`, // Use the imported image
+      }}
+    >
+      {/* Overlay for Brown Theme */}
+      <div
+        className="absolute inset-0 bg-[#AF8F6F]/70" // Semi-transparent brown overlay
+      ></div>
+
+      {/* Content Section */}
+      <div className="relative z-10 text-white px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <motion.h1
+          ref={headingRef}
+          className="mb-8 text-center text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold leading-tight tracking-tight"
+          initial={{ opacity: 0, y: -50 }}
+          animate={
+            isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
+          }
+          transition={{ duration: 0.5 }}
+        >
+          Unlock Ethiopia&apos;s Potential marks a pivotal moment in East Africa&apos;s
+          digital transformation. As Ethiopia embraces Bitcoin mining, we&apos;re
+          witnessing the dawn of a new era in the region&apos;s technological
+          landscape.
+        </motion.h1>
+
+        {/* Subheading */}
+        <motion.p
+          ref={subheadingRef}
+          className="text-center text-base sm:text-lg md:text-xl lg:text-2xl my-6 font-medium"
+          initial={{ opacity: 0, y: 50 }}
+          animate={
+            isSubheadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+          }
+          transition={{ duration: 0.5 }}
+        >
           Join us for this groundbreaking event that brings together industry
-          leaders, policymakers, and innovators to explore Ethiopia&apos;s
-          potential in the global Bitcoin mining ecosystem. We&apos;ll discuss
-          sustainable mining practices, regulatory frameworks, and the economic
-          impact of cryptocurrency mining in Ethiopia.
-        </p>
-        <p>
-          Through expert panel discussions and networking opportunities,
-          attendees will gain valuable insights into the future of Bitcoin
-          mining in Ethiopia and its role in driving economic growth and
-          technological advancement in the region.
-        </p>
-      </motion.div>
-      <motion.div
-        ref={lineRef}
-        className="w-32 h-1 bg-white mx-auto mt-10"
-        initial={{ width: 0 }}
-        animate={isLineInView ? { width: "8rem" } : { width: 0 }}
-        transition={{ duration: 1 }}
-      ></motion.div>
+          leaders, policymakers, and innovators to explore Ethiopia&apos;s potential
+          in the global Bitcoin mining ecosystem. We&apos;ll discuss sustainable
+          mining practices, regulatory frameworks, and the economic impact of
+          Bitcoin mining in Ethiopia.
+        </motion.p>
+
+        {/* Paragraph */}
+        <motion.div
+          ref={paragraphRef}
+          className="space-y-4 text-center my-8 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed"
+          initial={{ opacity: 0, y: 50 }}
+          animate={
+            isParagraphInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+          }
+          transition={{ duration: 0.5 }}
+        >
+          <p>
+            Through expert panel discussions and networking opportunities,
+            attendees will gain valuable insights into the future of Bitcoin
+            mining in Ethiopia and its role in driving economic growth and
+            technological advancement in the region.
+          </p>
+        </motion.div>
+
+        {/* Decorative Line */}
+        <motion.div
+          ref={lineRef}
+          className="w-20 sm:w-24 md:w-28 lg:w-32 h-1 bg-white mx-auto mt-8 mb-12" // Added bottom margin for extra spacing
+          initial={{ width: 0 }}
+          animate={isLineInView ? { width: "5rem" } : { width: 0 }}
+          transition={{ duration: 1 }}
+        ></motion.div>
+      </div>
     </div>
   );
 };

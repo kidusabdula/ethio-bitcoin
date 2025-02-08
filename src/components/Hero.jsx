@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="flex justify-center items-center h-[100vh] bg-white text-white text-center relative overflow-hidden">
+      {/* Floating Africa Watermark */}
       <motion.img
         src={africa_png}
         alt="Africa Watermark"
@@ -21,7 +22,6 @@ const Hero = () => {
         }}
         style={{ top: "20%", left: "10%" }}
       />
-
       <motion.img
         src={africa_png}
         alt="Africa Watermark Opposite"
@@ -39,6 +39,7 @@ const Hero = () => {
         style={{ bottom: "20%", right: "10%" }}
       />
 
+      {/* Floating Decorative Circles */}
       <motion.div
         className="absolute w-40 sm:w-60 h-40 sm:h-60 rounded-full bg-[#E4E0E1]/50"
         animate={{ scale: [1, 2, 1], opacity: [0.9, 0.3, 0.9] }}
@@ -52,6 +53,7 @@ const Hero = () => {
         style={{ bottom: "20%", right: "10%" }}
       ></motion.div>
 
+      {/* Floating Bitcoin Symbols */}
       <motion.div
         className="absolute text-5xl sm:text-7xl font-bold text-[#E4E0E1]"
         animate={{ y: [0, -20, 0], x: [-50, 50, -50] }}
@@ -69,17 +71,18 @@ const Hero = () => {
         ₿
       </motion.div>
 
-      <div className="relative z-10">
+      {/* Main Content */}
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8"> {/* Added padding for smaller screens */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl text-[#74512D] font-extrabold mb-8"
+          className="text-4xl sm:text-5xl md:text-6xl text-[#74512D] font-extrabold mb-6 sm:mb-8"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
         >
-          Unlocking Ethiopia&apos;s Potential
+          Unlock Ethiopia&apos;s Potential
         </motion.h1>
         <motion.p
-          className="text-xl sm:text-2xl text-black mb-8"
+          className="text-xl sm:text-2xl text-black mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1 }}
@@ -87,25 +90,23 @@ const Hero = () => {
           Pioneering the Future of Blockchain Technology
         </motion.p>
         <motion.p
-          className="text-xs sm:text-sm md:text-base text-black mb-8 "
+          className="text-xs sm:text-sm md:text-base text-black mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1 }}
         >
-          Join us in shaping Ethiopia&apos;s digital landscape through
-          innovative blockchain solutions, sustainable mining practices, and
-          cutting-edge technology infrastructure.
+          Join us in shaping Ethiopia&apos;s digital landscape through innovative
+          blockchain solutions, sustainable mining practices, and cutting-edge
+          technology infrastructure.
         </motion.p>
-
         <motion.div
-          className="text-lg sm:text-xl text-[#A67B5B] font-semibold mb-8"
+          className="text-lg sm:text-xl text-[#A67B5B] font-semibold mb-10 sm:mb-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1.5 }}
         >
           Ethiopia, Addis Ababa | March 5-6 | Hyatt Regency, Meskel Square
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
