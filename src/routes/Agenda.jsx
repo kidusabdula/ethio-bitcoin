@@ -56,10 +56,10 @@ const Agenda = () => {
       events: [
         {
           time: "TBA",
-          title: "Site Tour of Munich International Mining",
+          title: "Site Tour Of A Bitcoin Mining Facility",
           location: "Bitcoin Mining Facility",
           description:
-            "Exclusive tour of a state-of-the-art Bitcoin mining facility.",
+            "Exclusive Tour Of A State-Of-The Art Bitcoin Farm",
         },
       ],
     },

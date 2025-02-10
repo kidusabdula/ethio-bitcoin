@@ -6,6 +6,9 @@ import UWBO from "../assets/partners/uwbo.png";
 import BitDeer from "../assets/partners/bitdeer.svg";
 import Siban from "../assets/partners/sibon-1-1TM-1536x504.png";
 import Potentia from "../assets/partners/Artboard1.jpg";
+import blockChain from "../assets/partners/blockchain.jpg";
+import hcm from "../assets/partners/hcm.png";
+import terraaxis from "../assets/partners/terraaxis.png";
 
 const Sponsors = () => {
   const partners = [
@@ -19,7 +22,17 @@ const Sponsors = () => {
     { name: "Enegix", image: Enegix, link: "https://enegix.net/en" },
     { name: "Megawatt", image: Megawatt, link: "https://www.megawatthq.com/" },
     { name: "UWBO", image: UWBO, link: "https://uwbo.org/" },
-    { name: "BitDeer", image: BitDeer, link: "https://www.bitdeer.com/" },
+    {
+      name: "The BlockChain Center",
+      image: blockChain,
+      link: "https://theblockchaincenter.ae",
+    },
+    {
+      name: "HCM Capital",
+      image: hcm,
+      link: "https://theblockchaincenter.ae",
+    },
+    { name: "Terra Axis", image: terraaxis, link: "https://terraaxis.co" },
     { name: "Siban", image: Siban, link: "https://siban.org.ng/" },
   ];
 
@@ -29,7 +42,8 @@ const Sponsors = () => {
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-[#74512D] dark:text-[#74512D] md:text-4xl">
           Our Partners
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-center items-center">
+        {/* Grid Layout with Responsive Columns */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-center items-center">
           {partners.map((partner, index) => (
             <a
               key={index}
