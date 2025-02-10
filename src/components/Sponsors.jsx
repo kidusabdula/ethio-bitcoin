@@ -3,7 +3,6 @@ import BitcoinBirr from "../assets/partners/bitcoinbirr.jpeg";
 import Enegix from "../assets/partners/download.jpg";
 import Megawatt from "../assets/partners/megawatt.svg";
 import UWBO from "../assets/partners/uwbo.png";
-import BitDeer from "../assets/partners/bitdeer.svg";
 import Siban from "../assets/partners/sibon-1-1TM-1536x504.png";
 import Potentia from "../assets/partners/Artboard1.jpg";
 import blockChain from "../assets/partners/blockchain.jpg";
