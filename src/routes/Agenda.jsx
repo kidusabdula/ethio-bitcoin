@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
-import robert from "../assets/Robert_Luft.jpeg";
-import kal from "../assets/Kal_Kassa.jpeg";
+import robert from "../assets/people/Robert_Luft.jpeg";
+import kal from "../assets/people/Kal_Kassa.jpeg";
+import rizwan from "../assets/people/Rizwan_Kamarudheen.jpg";
+import obinna from "../assets/people/Obinna_Iwuno.jpg";
+import sunil from "../assets/people/Sunil_Kumar.jpg";
+import luca from "../assets/people/Luca_Infeld.jpeg";
 
 const Agenda = () => {
   const agendaItems = [
@@ -16,10 +20,10 @@ const Agenda = () => {
         {
           time: "6:30 PM - 6:45 PM",
           title: "Opening Remarks",
-          speaker: "Robert Luft",
-          speakerInfo: "CEO - potentia",
-          speakerImage: robert,
-          linkedin: "https://www.linkedin.com/in/robluft/",
+          speaker: ["Robert Luft"],
+          speakerInfo: ["CEO - potentia"],
+          speakerImage: [robert],
+          linkedin: ["https://www.linkedin.com/in/robluft/"],
           location: "Main Hall",
           description:
             "A warm welcome and overview of the event's objectives and highlights.",
@@ -27,20 +31,52 @@ const Agenda = () => {
         {
           time: "6:45 PM - 7:00 PM",
           title: "Current State of Ethiopia Bitcoin Mining",
-          speaker: "Kal Kassa",
-          speakerInfo: "CEO - BitcoinBirr",
-          speakerImage: kal,
-          linkedin: "https://www.linkedin.com/in/kalkassa/",
+          speaker: ["Kal Kassa"],
+          speakerInfo: ["CEO - BitcoinBirr"],
+          speakerImage: [kal],
+          linkedin: ["https://www.linkedin.com/in/kalkassa/"],
           location: "Main Hall",
           description:
             "An in-depth look at the current state and future potential of Bitcoin mining in Ethiopia.",
         },
         {
-          time: "7:00 PM - 8:00 PM",
-          title: "Panel Discussion: The Future of Bitcoin Mining in Africa",
+          time: "TBA",
+          title:
+            "Panel Discussion: Choosing Ethiopia as Bitcoin Mining Destination",
+          speaker: ["Kal Kassa", "Rizwan Kamarudheen", "Sunil Kumar"],
+          speakerInfo: [
+            "CEO - BitcoinBirr",
+            "Technical Lead - Dahab Miners",
+            "Mining Operations & Strategic Planning - AmityAge",
+          ],
+          speakerImage: [kal, rizwan, sunil],
+          linkedin: [
+            "https://www.linkedin.com/in/kalkassa/",
+            "https://www.linkedin.com/in/rizwan-kamar-ab117a172/",
+            "https://www.linkedin.com/in/sunil-kumar-570626214/",
+          ],
           location: "Main Hall",
           description:
-            "Industry experts discuss the challenges and opportunities for Bitcoin mining across Africa.",
+            "Experts discuss why Ethiopia is an ideal destination for Bitcoin mining.",
+        },
+        {
+          time: "TBA",
+          title: "Panel Discussion: Bitcoin Mining and Global Connectivity",
+          speaker: ["Robert Luft", "Obinna Iwuno", "Luca Infeld"],
+          speakerInfo: [
+            "CEO - potentia",
+            "President - SiBAN",
+            "Founder & CBDO - Munich International Mining LLC",
+          ],
+          speakerImage: [robert, obinna, luca],
+          linkedin: [
+            "https://www.linkedin.com/in/robluft/",
+            "https://www.linkedin.com/in/obinna-iwuno-b1575b106/",
+            "https://www.linkedin.com/in/luca-infeld/",
+          ],
+          location: "Main Hall",
+          description:
+            "Exploring how Bitcoin mining connects Ethiopia to the global economy.",
         },
         {
           time: "8:00 PM - 9:00 PM",
@@ -57,9 +93,8 @@ const Agenda = () => {
         {
           time: "TBA",
           title: "Site Tour Of A Bitcoin Mining Facility",
-          location: "Bitcoin Mining Facility",
-          description:
-            "Exclusive Tour Of A State-Of-The Art Bitcoin Farm",
+          location: "Amity Age Mining Facility",
+          description: "Exclusive Tour Of A State-Of-The Art Bitcoin Farm",
         },
       ],
     },
@@ -72,6 +107,7 @@ const Agenda = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      {/* Background Animations */}
       <motion.div
         className="absolute w-40 h-40 rounded-full bg-[#AF8F6F]/10 blur-lg"
         animate={{
@@ -94,6 +130,8 @@ const Agenda = () => {
         className="absolute inset-0 bg-gradient-to-br from-transparent via-[#AF8F6F]/5 to-[#AF8F6F]/10 pointer-events-none"
         style={{ zIndex: -1 }}
       ></div>
+
+      {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.h2
           className="text-4xl font-bold text-[#AF8F6F] text-center mb-12"
@@ -143,35 +181,42 @@ const Agenda = () => {
                         {event.title}
                       </h4>
                       {event.speaker && (
-                        <div className="flex items-center space-x-4 mb-4">
-                          <a
-                            href={event.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block overflow-hidden rounded-full w-16 h-16 transform transition duration-300 hover:scale-110"
-                          >
-                            <img
-                              className="w-full h-full object-cover"
-                              src={event.speakerImage}
-                              alt={`${event.speaker}'s Profile`}
-                            />
-                          </a>
-                          <div>
-                            <p className="text-gray-600 font-medium">
-                              {event.speaker}
-                            </p>
-                            <p className="text-gray-500 text-sm">
-                              {event.speakerInfo}
-                            </p>
-                            <a
-                              href={event.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#AF8F6F] text-sm hover:underline"
+                        <div className="flex flex-wrap gap-4 mb-4">
+                          {event.speaker.map((speaker, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center space-x-4"
                             >
-                              View LinkedIn Profile
-                            </a>
-                          </div>
+                              <a
+                                href={event.linkedin[index]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block overflow-hidden rounded-full w-16 h-16 transform transition duration-300 hover:scale-110"
+                              >
+                                <img
+                                  className="w-full h-full object-cover"
+                                  src={event.speakerImage[index]}
+                                  alt={`${speaker}'s Profile`}
+                                />
+                              </a>
+                              <div>
+                                <p className="text-gray-600 font-medium">
+                                  {speaker}
+                                </p>
+                                <p className="text-gray-500 text-sm">
+                                  {event.speakerInfo[index]}
+                                </p>
+                                <a
+                                  href={event.linkedin[index]}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-[#AF8F6F] text-sm hover:underline"
+                                >
+                                  View LinkedIn Profile
+                                </a>
+                              </div>
+                            </div>
+                          ))}
                         </div>
                       )}
                       <div className="text-sm text-gray-500 mb-2">

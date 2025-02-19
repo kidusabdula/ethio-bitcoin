@@ -1,6 +1,6 @@
-import robert from "../assets/Robert_Luft.jpeg";
-import kal from "../assets/Kal_Kassa.jpeg";
-import luca from "../assets/Luca_Infeld.jpeg";
+import robert from "../assets/people/Robert_Luft.jpeg";
+import kal from "../assets/people/Kal_Kassa.jpeg";
+import luca from "../assets/people/Luca_Infeld.jpeg";
 
 const Teams = () => {
   return (

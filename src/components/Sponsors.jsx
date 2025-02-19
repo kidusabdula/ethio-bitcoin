@@ -1,17 +1,20 @@
+import React from "react";
 import MIM from "../assets/partners/MIM.png";
 import BitcoinBirr from "../assets/partners/bitcoinbirr.jpeg";
 import Enegix from "../assets/partners/download.jpg";
 import Megawatt from "../assets/partners/megawatt.svg";
 import UWBO from "../assets/partners/uwbo.png";
 import Siban from "../assets/partners/sibon-1-1TM-1536x504.png";
-import Potentia from "../assets/partners/Artboard1.jpg";
-import blockChain from "../assets/partners/blockchain.jpg";
-import hcm from "../assets/partners/hcm.png";
-import terraaxis from "../assets/partners/terraaxis.png";
+import potentia from "../assets/partners/Artboard1.jpg";
+import BlockChain from "../assets/partners/blockchain.jpg";
+import HCM from "../assets/partners/hcm.png";
+import Terraaxis from "../assets/partners/terraaxis.png";
+import Amity from "../assets/partners/amity.png";
+import Dehab from "../assets/partners/dehab.png";
 
 const Sponsors = () => {
   const partners = [
-    { name: "Potentia", image: Potentia },
+    { name: "potentia", image: potentia },
     { name: "MIM", image: MIM, link: "https://mim.farm/en/" },
     {
       name: "Bitcoin Birr",
@@ -23,17 +26,26 @@ const Sponsors = () => {
     { name: "UWBO", image: UWBO, link: "https://uwbo.org/" },
     {
       name: "The BlockChain Center",
-      image: blockChain,
+      image: BlockChain,
       link: "https://theblockchaincenter.ae",
     },
     {
       name: "HCM Capital",
-      image: hcm,
+      image: HCM,
       link: "https://theblockchaincenter.ae",
     },
-    { name: "Terra Axis", image: terraaxis, link: "https://terraaxis.co" },
+    { name: "Terra Axis", image: Terraaxis, link: "https://terraaxis.co" },
     { name: "Siban", image: Siban, link: "https://siban.org.ng/" },
+    // { name: "AmityAge", image: Amity, link: "https://www.amityage.com" },
+    // { name: "Dehab Miners", image: Dehab, link: "https://dahabminers.com" },
   ];
+
+  const getGridCols = () => {
+    const numPartners = partners.length;
+    if (numPartners <= 2) return "grid-cols-2";
+    if (numPartners <= 4) return "sm:grid-cols-2 md:grid-cols-3"; 
+    return "sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"; 
+  };
 
   return (
     <section className="bg-white dark:bg-white">
@@ -41,21 +53,32 @@ const Sponsors = () => {
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-[#74512D] dark:text-[#74512D] md:text-4xl">
           Our Partners
         </h2>
-        {/* Grid Layout with Responsive Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-center items-center">
+        {/* Dynamic Grid Layout */}
+        <div
+          className={`grid ${getGridCols()} gap-8 justify-center items-center`}
+        >
           {partners.map((partner, index) => (
             <a
               key={index}
               href={partner.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-full h-48 transition-transform duration-300 hover:scale-105"
+              className="flex items-center justify-center w-full h-48 bg-white transition-transform duration-300 hover:scale-105 rounded-lg overflow-hidden"
             >
-              <img
-                src={partner.image}
-                alt={partner.name}
-                className="max-h-full w-auto object-contain"
-              />
+              {/* Add a conditional background for transparent logos */}
+              <div
+                className={`flex items-center justify-center w-full h-full ${
+                  partner.name === "AmityAge" || partner.name === "Dehab Miners"
+                    ? "bg-[#ebc798]" // Light beige background for transparent logos
+                    : ""
+                }`}
+              >
+                <img
+                  src={partner.image}
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain p-5"
+                />
+              </div>
             </a>
           ))}
         </div>
