@@ -5,6 +5,7 @@ import rizwan from "../assets/people/Rizwan_Kamarudheen.jpg";
 import obinna from "../assets/people/Obinna_Iwuno.jpg";
 import sunil from "../assets/people/Sunil_Kumar.jpg";
 import luca from "../assets/people/Luca_Infeld.jpeg";
+import mohamad from "../assets/people/Mohammed_Khalife.jpg"
 
 const Agenda = () => {
   const agendaItems = [
@@ -40,16 +41,17 @@ const Agenda = () => {
             "An in-depth look at the current state and future potential of Bitcoin mining in Ethiopia.",
         },
         {
-          time: "TBA",
+          time: "7:00 PM - 7:25 PM",
           title:
             "Panel Discussion: Choosing Ethiopia as Bitcoin Mining Destination",
-          speaker: ["Kal Kassa", "Rizwan Kamarudheen", "Sunil Kumar"],
+          speaker: ["Kal Kassa", "Rizwan Kamarudheen", "Sunil Kumar", "Mohamad Khalife"],
           speakerInfo: [
             "CEO - BitcoinBirr",
             "Technical Lead - Dahab Miners",
-            "Mining Operations & Strategic Planning - AmityAge",
+            "Mining & Strategic Planning - AmityAge",
+            "CEO - BITCITY"
           ],
-          speakerImage: [kal, rizwan, sunil],
+          speakerImage: [kal, rizwan, sunil, mohamad],
           linkedin: [
             "https://www.linkedin.com/in/kalkassa/",
             "https://www.linkedin.com/in/rizwan-kamar-ab117a172/",
@@ -60,13 +62,13 @@ const Agenda = () => {
             "Experts discuss why Ethiopia is an ideal destination for Bitcoin mining.",
         },
         {
-          time: "TBA",
+          time: "7:25 - 7:50 PM",
           title: "Panel Discussion: Bitcoin Mining and Global Connectivity",
           speaker: ["Robert Luft", "Obinna Iwuno", "Luca Infeld"],
           speakerInfo: [
             "CEO - potentia",
             "President - SiBAN",
-            "Founder & CBDO - Munich International Mining LLC",
+            "Founder - Munich International Mining",
           ],
           speakerImage: [robert, obinna, luca],
           linkedin: [
