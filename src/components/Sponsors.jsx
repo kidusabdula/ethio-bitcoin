@@ -1,4 +1,3 @@
-import React from "react";
 import MIM from "../assets/partners/MIM.png";
 import BitcoinBirr from "../assets/partners/bitcoinbirr.jpeg";
 import Enegix from "../assets/partners/download.jpg";
@@ -9,8 +8,10 @@ import potentia from "../assets/partners/Artboard1.jpg";
 import BlockChain from "../assets/partners/blockchain.jpg";
 import HCM from "../assets/partners/hcm.png";
 import Terraaxis from "../assets/partners/terraaxis.png";
-import Amity from "../assets/partners/amity.png";
-import Dehab from "../assets/partners/dehab.png";
+import Dehab from "../assets/partners/dah.png";
+import Amity from "../assets/partners/am.png";
+import TheSource from "../assets/partners/thesource.png";
+import BitCity from "../assets/partners/bitcity.jpg";
 
 const Sponsors = () => {
   const partners = [
@@ -36,16 +37,20 @@ const Sponsors = () => {
     },
     { name: "Terra Axis", image: Terraaxis, link: "https://terraaxis.co" },
     { name: "Siban", image: Siban, link: "https://siban.org.ng/" },
-    // { name: "AmityAge", image: Amity, link: "https://www.amityage.com" },
-    // { name: "Dehab Miners", image: Dehab, link: "https://dahabminers.com" },
+    {
+      name: "TheSource",
+      image: TheSource,
+      link: "https://www.thesourcegroups.com/",
+    },
+    { name: "BITCITY", image: BitCity, link: "" },
+    { name: "AmityAge", image: Amity, link: "https://www.amityage.com" },
+    { name: "Dehab Miners", image: Dehab, link: "https://dahabminers.com" },
   ];
 
-  const getGridCols = () => {
-    const numPartners = partners.length;
-    if (numPartners <= 2) return "grid-cols-2";
-    if (numPartners <= 4) return "sm:grid-cols-2 md:grid-cols-3"; 
-    return "sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"; 
-  };
+  // Split the partners array into chunks
+  const firstRow = partners.slice(0, 5); // First 5 logos
+  const secondRow = partners.slice(5, 10); // Next 5 logos
+  const thirdRow = partners.slice(10); // Remaining 4 logos
 
   return (
     <section className="bg-white dark:bg-white">
@@ -53,11 +58,10 @@ const Sponsors = () => {
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-[#74512D] dark:text-[#74512D] md:text-4xl">
           Our Partners
         </h2>
-        {/* Dynamic Grid Layout */}
-        <div
-          className={`grid ${getGridCols()} gap-8 justify-center items-center`}
-        >
-          {partners.map((partner, index) => (
+
+        {/* First Row (5 Logos) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center mb-8">
+          {firstRow.map((partner, index) => (
             <a
               key={index}
               href={partner.link}
@@ -65,11 +69,64 @@ const Sponsors = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full h-48 bg-white transition-transform duration-300 hover:scale-105 rounded-lg overflow-hidden"
             >
-              {/* Add a conditional background for transparent logos */}
               <div
                 className={`flex items-center justify-center w-full h-full ${
                   partner.name === "AmityAge" || partner.name === "Dehab Miners"
                     ? "bg-[#ebc798]" // Light beige background for transparent logos
+                    : ""
+                }`}
+              >
+                <img
+                  src={partner.image}
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain p-5"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Second Row (5 Logos) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center mb-8">
+          {secondRow.map((partner, index) => (
+            <a
+              key={index}
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-full h-48 bg-white transition-transform duration-300 hover:scale-105 rounded-lg overflow-hidden"
+            >
+              <div
+                className={`flex items-center justify-center w-full h-full ${
+                  partner.name === "AmityAge" || partner.name === "Dehab Miners"
+                    ? "bg-[#ebc798]" // Light beige background for transparent logos
+                    : ""
+                }`}
+              >
+                <img
+                  src={partner.image}
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain p-5"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Third Row (4 Logos) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center">
+          {thirdRow.map((partner, index) => (
+            <a
+              key={index}
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-full h-48 bg-white transition-transform duration-300 hover:scale-105 rounded-lg overflow-hidden"
+            >
+              <div
+                className={`flex items-center justify-center w-full h-full ${
+                  partner.name === "AmityAge" || partner.name === "Dehab Miners"
+                    ? "" // Light beige background for transparent logos
                     : ""
                 }`}
               >

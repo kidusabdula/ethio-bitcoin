@@ -95,7 +95,7 @@ const Agenda = () => {
         {
           time: "TBA",
           title: "Site Tour Of A Bitcoin Mining Facility",
-          location: "Amity Age Mining Facility",
+          location: "BITCITY Mining Facility",
           description: "Exclusive Tour Of A State-Of-The Art Bitcoin Farm",
         },
       ],
