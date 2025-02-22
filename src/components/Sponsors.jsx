@@ -1,3 +1,4 @@
+import React from "react";
 import MIM from "../assets/partners/MIM.png";
 import BitcoinBirr from "../assets/partners/bitcoinbirr.jpeg";
 import Enegix from "../assets/partners/download.jpg";
@@ -47,6 +48,16 @@ const Sponsors = () => {
     { name: "Dehab Miners", image: Dehab, link: "https://dahabminers.com" },
   ];
 
+  // Define scaling factors for specific logos
+  const logoScale = {
+    BITCITY: "scale-175", // Make BitCity smaller
+    MegaCorp: "scale-125", // Enlarge MegaCorp
+    AnotherLogo: "scale-50",
+    TheSource: "scale-80",
+    'HCM Capital': "scale-60",
+    'The BlockChain Center': "scale-140" // Make AnotherLogo even smaller
+  };
+
   // Split the partners array into chunks
   const firstRow = partners.slice(0, 5); // First 5 logos
   const secondRow = partners.slice(5, 10); // Next 5 logos
@@ -58,7 +69,6 @@ const Sponsors = () => {
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-[#74512D] dark:text-[#74512D] md:text-4xl">
           Our Partners
         </h2>
-
         {/* First Row (5 Logos) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center mb-8">
           {firstRow.map((partner, index) => (
@@ -79,13 +89,14 @@ const Sponsors = () => {
                 <img
                   src={partner.image}
                   alt={partner.name}
-                  className="max-h-full max-w-full object-contain p-5"
+                  className={`max-h-full max-w-full object-contain p-5 ${
+                    logoScale[partner.name] || ""
+                  }`}
                 />
               </div>
             </a>
           ))}
         </div>
-
         {/* Second Row (5 Logos) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center mb-8">
           {secondRow.map((partner, index) => (
@@ -106,13 +117,14 @@ const Sponsors = () => {
                 <img
                   src={partner.image}
                   alt={partner.name}
-                  className="max-h-full max-w-full object-contain p-5"
+                  className={`max-h-full max-w-full object-contain p-5 ${
+                    logoScale[partner.name] || ""
+                  }`}
                 />
               </div>
             </a>
           ))}
         </div>
-
         {/* Third Row (4 Logos) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center">
           {thirdRow.map((partner, index) => (
@@ -133,7 +145,9 @@ const Sponsors = () => {
                 <img
                   src={partner.image}
                   alt={partner.name}
-                  className="max-h-full max-w-full object-contain p-5"
+                  className={`max-h-full max-w-full object-contain p-5 ${
+                    logoScale[partner.name] || ""
+                  }`}
                 />
               </div>
             </a>
