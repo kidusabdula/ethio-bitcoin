@@ -9,7 +9,7 @@ import BlockChain from "../assets/partners/blockchain.jpg";
 import HCM from "../assets/partners/hcm.png";
 import Terraaxis from "../assets/partners/terraaxis.png";
 import Dehab from "../assets/partners/dah.png";
-import Amity from "../assets/partners/am.png";
+import Amity from "../assets/partners/amity.png";
 import TheSource from "../assets/partners/thesource.png";
 import BitCity from "../assets/partners/bitcity.jpg";
 
