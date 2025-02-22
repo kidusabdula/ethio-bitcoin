@@ -50,12 +50,79 @@ const Sponsors = () => {
 
   // Define scaling factors for specific logos
   const logoScale = {
-    BITCITY: "scale-175", // Make BitCity smaller
-    MegaCorp: "scale-125", // Enlarge MegaCorp
-    AnotherLogo: "scale-50",
-    TheSource: "scale-80",
-    'HCM Capital': "scale-60",
-    'The BlockChain Center': "scale-140" // Make AnotherLogo even smaller
+    AmityAge: {
+      sm: "scale-70", 
+      md: "scale-100", // Tablet scal
+      lg: "scale-100", // Desktop scaling
+    },
+    BITCITY: {
+      sm: "scale-200", 
+      md: "scale-100", // Tablet scal
+      lg: "scale-175", // Desktop scaling
+    },
+    MegaCorp: {
+      sm: "scale-80",
+      md: "scale-100",
+      lg: "scale-125",
+    },
+    TheSource: {
+      sm: "scale-50",
+      md: "scale-80",
+      lg: "scale-100",
+    },
+    'HCM Capital': {
+      sm: "scale-80",
+      md: "scale-60",
+      lg: "scale-100",
+    },
+    'The BlockChain Center': {
+      sm: "scale-120",
+      md: "scale-120",
+      lg: "scale-140",
+    },
+    'Terra Axis': {
+      sm: "scale-90",
+      md: "scale-80",
+      lg: "scale-100",
+    },
+    Siban: {
+      sm: "scale-90",
+      md: "scale-80",
+      lg: "scale-100",
+    },
+    potentia: {
+      sm: "scale-200",
+      md: "scale-70",
+      lg: "scale-80",
+    },
+    MIM:{
+      sm: "scale-100",
+      md: "scale-120",
+      lg: "scale-140",
+    },
+    'Bitcoin Birr':{
+      sm: "scale-70",
+      md: "scale-120",
+      lg: "scale-140",
+    },
+    Enegix:{
+      sm: "scale-200",
+      md: "scale-120",
+      lg: "scale-140",
+    },
+    Megawatt:{
+      sm: "scale-100",
+      md: "scale-120",
+      lg: "scale-140",
+    },
+    UWBO:{
+      sm: "scale-120",
+      md: "scale-120",
+      lg: "scale-140",
+    },
+
+
+
   };
 
   // Split the partners array into chunks
@@ -90,8 +157,10 @@ const Sponsors = () => {
                   src={partner.image}
                   alt={partner.name}
                   className={`max-h-full max-w-full object-contain p-5 ${
-                    logoScale[partner.name] || ""
-                  }`}
+                    logoScale[partner.name]?.sm || "" 
+                  } sm:${logoScale[partner.name]?.sm || ""} md:${
+             logoScale[partner.name]?.md || ""
+                  } lg:${logoScale[partner.name]?.lg || ""}`}
                 />
               </div>
             </a>
@@ -118,8 +187,10 @@ const Sponsors = () => {
                   src={partner.image}
                   alt={partner.name}
                   className={`max-h-full max-w-full object-contain p-5 ${
-                    logoScale[partner.name] || ""
-                  }`}
+                    logoScale[partner.name]?.sm || "" 
+                  } sm:${logoScale[partner.name]?.sm || ""} md:${
+             logoScale[partner.name]?.md || ""
+                  } lg:${logoScale[partner.name]?.lg || ""}`}
                 />
               </div>
             </a>
@@ -146,8 +217,10 @@ const Sponsors = () => {
                   src={partner.image}
                   alt={partner.name}
                   className={`max-h-full max-w-full object-contain p-5 ${
-                    logoScale[partner.name] || ""
-                  }`}
+                    logoScale[partner.name]?.sm || "" 
+                  } sm:${logoScale[partner.name]?.sm || ""} md:${
+             logoScale[partner.name]?.md || ""
+                  } lg:${logoScale[partner.name]?.lg || ""}`}
                 />
               </div>
             </a>
