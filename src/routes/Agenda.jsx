@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import robert from "../assets/people/Robert_Luft.jpeg";
 import kal from "../assets/people/Kal_Kassa.jpeg";
 import rizwan from "../assets/people/Rizwan_Kamarudheen.jpg";
-import obinna from "../assets/people/Obinna_Iwuno.jpg";
 import sunil from "../assets/people/Sunil_Kumar.jpg";
 import luca from "../assets/people/Luca_Infeld.jpeg";
 import mohamad from "../assets/people/Mohammed_Khalife.jpg"
+import nemo from "../assets/people/Nemo_Semret.jpg"
 
 const Agenda = () => {
   const agendaItems = [
@@ -64,16 +64,16 @@ const Agenda = () => {
         {
           time: "7:25 - 7:50 PM",
           title: "Panel Discussion: Bitcoin Mining and Global Connectivity",
-          speaker: ["Robert Luft", "Obinna Iwuno", "Luca Infeld"],
+          speaker: ["Robert Luft", "Nemo Semret", "Luca Infeld"],
           speakerInfo: [
             "CEO - potentia",
-            "President - SiBAN",
+            "CEO - QRB Labs",
             "Founder - Munich International Mining",
           ],
-          speakerImage: [robert, obinna, luca],
+          speakerImage: [robert, nemo, luca],
           linkedin: [
             "https://www.linkedin.com/in/robluft/",
-            "https://www.linkedin.com/in/obinna-iwuno-b1575b106/",
+            "https://www.linkedin.com/in/nemozen/",
             "https://www.linkedin.com/in/luca-infeld/",
           ],
           location: "Main Hall",

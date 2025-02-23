@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import ethiopian_flag from "../assets/Flag.png";
+import logo from "../assets/UEPLogo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
           clipPath: "ellipse(50% 100% at 50% 100%)",
         }}
       ></div>
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 rounded-t-3xl">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 rounded-t-3xl">
         <motion.a
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -22,9 +22,9 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="w-12 h-12 bg-transparent rounded-full flex items-center justify-center overflow-hidden">
+          <div className="w-20 h-20 bg-transparent flex items-center justify-center overflow-hidden">
             <img
-              src={ethiopian_flag}
+              src={logo}
               alt="Ethiopian Flag"
               className="w-full h-full object-cover"
             />
