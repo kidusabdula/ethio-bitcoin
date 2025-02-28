@@ -15,7 +15,7 @@ import BitCity from "../assets/partners/bitcity.jpg";
 
 const Sponsors = () => {
   const partners = [
-    { name: "potentia", image: potentia },
+    { name: "potentia", image: potentia, link:"https://www.potentia.digital/" },
     { name: "MIM", image: MIM, link: "https://mim.farm/en/" },
     {
       name: "Bitcoin Birr",
