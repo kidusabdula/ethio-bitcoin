@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import robert from "../assets/people/Robert_Luft.jpeg";
 import kal from "../assets/people/Kal_Kassa.jpeg";
-import rizwan from "../assets/people/Rizwan_Kamarudheen.jpg";
 import sunil from "../assets/people/Sunil_Kumar.jpg";
 import luca from "../assets/people/Luca_Infeld.jpeg";
 import mohamad from "../assets/people/Mohammed_Khalife.jpg"
 import nemo from "../assets/people/Nemo_Semret.jpg"
 import timo  from "../assets/people/Timo_Steipe.jpg"
+import nick from "../assets/people/Nick_Quivooy.jpg"
+import abemelek from "../assets/people/white_bg.jpg"
 
 const Agenda = () => {
   const agendaItems = [
@@ -53,12 +54,13 @@ const Agenda = () => {
             "CEO - BITCITY",
             "Director of African Startegy - potentia"
           ],
-          speakerImage: [kal, timo, sunil, mohamad],
+          speakerImage: [kal, timo, sunil, mohamad, abemelek],
           linkedin: [
             "https://www.linkedin.com/in/kalkassa/",
             "https://www.linkedin.com/in/timo-steipe-595b98212/",
             "https://www.linkedin.com/in/sunil-kumar-570626214/",
-            ""
+            "",
+            "https://www.linkedin.com/in/abemelek-daniel/"
           ],
           location: "Main Hall",
           description:
@@ -75,11 +77,13 @@ const Agenda = () => {
             "Director/Owner - EOS Installation B.V.",
             "Global Financial Executive - BDO Ethiopia"
           ],
-          speakerImage: [robert, nemo, luca],
+          speakerImage: [robert, nemo, luca, nick, abemelek],
           linkedin: [
             "https://www.linkedin.com/in/robluft/",
             "https://www.linkedin.com/in/nemozen/",
             "https://www.linkedin.com/in/luca-infeld/",
+            "https://www.linkedin.com/in/nickquivooy/",
+            "https://www.linkedin.com/in/million-kibret-20445343/"
           ],
           location: "Main Hall",
           description:
