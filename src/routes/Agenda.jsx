@@ -7,7 +7,7 @@ import mohamad from "../assets/people/Mohammed_Khalife.jpg"
 import nemo from "../assets/people/Nemo_Semret.jpg"
 import timo  from "../assets/people/Timo_Steipe.jpg"
 import nick from "../assets/people/Nick_Quivooy.jpg"
-import abemelek from "../assets/people/white_bg.jpg"
+import abemelek from "../assets/people/blank_profile.jpg"
 
 const Agenda = () => {
   const agendaItems = [
