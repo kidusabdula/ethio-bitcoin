@@ -6,6 +6,7 @@ import sunil from "../assets/people/Sunil_Kumar.jpg";
 import luca from "../assets/people/Luca_Infeld.jpeg";
 import mohamad from "../assets/people/Mohammed_Khalife.jpg"
 import nemo from "../assets/people/Nemo_Semret.jpg"
+import timo  from "../assets/people/Timo_Steipe.jpg"
 
 const Agenda = () => {
   const agendaItems = [
@@ -44,18 +45,20 @@ const Agenda = () => {
           time: "7:00 PM - 7:25 PM",
           title:
             "Panel Discussion: Choosing Ethiopia as Bitcoin Mining Destination",
-          speaker: ["Kal Kassa", "Rizwan Kamarudheen", "Sunil Kumar", "Mohamad Khalife"],
+          speaker: ["Kal Kassa", "Timo Steipe", "Sunil Kumar", "Mohamad Khalife", "Abemelek Daniel"],
           speakerInfo: [
             "CEO - BitcoinBirr",
-            "Technical Lead - Dahab Miners",
+            "CTO - Munich International Mining",
             "Mining & Strategic Planning - AmityAge",
-            "CEO - BITCITY"
+            "CEO - BITCITY",
+            "Director of African Startegy - potentia"
           ],
-          speakerImage: [kal, rizwan, sunil, mohamad],
+          speakerImage: [kal, timo, sunil, mohamad],
           linkedin: [
             "https://www.linkedin.com/in/kalkassa/",
-            "https://www.linkedin.com/in/rizwan-kamar-ab117a172/",
+            "https://www.linkedin.com/in/timo-steipe-595b98212/",
             "https://www.linkedin.com/in/sunil-kumar-570626214/",
+            ""
           ],
           location: "Main Hall",
           description:
@@ -64,11 +67,13 @@ const Agenda = () => {
         {
           time: "7:25 - 7:50 PM",
           title: "Panel Discussion: Bitcoin Mining and Global Connectivity",
-          speaker: ["Robert Luft", "Nemo Semret", "Luca Infeld"],
+          speaker: ["Robert Luft", "Nemo Semret", "Luca Infeld", "Nick Quivooy", "Million Kibret"],
           speakerInfo: [
             "CEO - potentia",
             "CEO - QRB Labs",
             "Founder - Munich International Mining",
+            "Director/Owner - EOS Installation B.V.",
+            "Global Financial Executive - BDO Ethiopia"
           ],
           speakerImage: [robert, nemo, luca],
           linkedin: [
